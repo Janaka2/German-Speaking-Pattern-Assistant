@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Speaking Assistant</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🇩🇪 Speaking Assistant</div>
+    <div class="mode-switch" role="tablist">
+      <button class="mode-btn active" data-mode="live" role="tab">⚡ Live</button>
+      <button class="mode-btn" data-mode="learn" role="tab">📚 Learn</button>
+    </div>
+  </header>
+
+  <!-- LIVE MODE ------------------------------------------------------------ -->
+  <main id="mode-live" class="mode-panel">
+    <p class="hint">Tap a phrase to hear it. Stay calm — you have it.</p>
+    <div id="speak-now"></div>
+    <section class="remember">
+      <h2>🧠 Always Remember</h2>
+      <ol id="always-remember"></ol>
+    </section>
+  </main>
+
+  <!-- LEARN MODE ----------------------------------------------------------- -->
+  <main id="mode-learn" class="mode-panel hidden">
+    <nav class="subtabs" id="learn-tabs">
+      <button class="subtab active" data-tab="build">🛠 Build</button>
+      <button class="subtab" data-tab="myday">🗓 My Day</button>
+      <button class="subtab" data-tab="future">🔮 My Plans</button>
+      <button class="subtab" data-tab="decline">🔤 Decline</button>
+      <button class="subtab" data-tab="quiz">🎯 Quiz</button>
+      <button class="subtab" data-tab="essentials">📖 Essentials</button>
+      <button class="subtab" data-tab="dativ">Dativ</button>
+      <button class="subtab" data-tab="poss">Possessive</button>
+      <button class="subtab" data-tab="wo">Wo/Wohin</button>
+      <button class="subtab" data-tab="pattern">Patterns</button>
+      <button class="subtab" data-tab="modal">Modals</button>
+      <button class="subtab" data-tab="mistakes">My Mistakes</button>
+    </nav>
+    <div id="learn-content"></div>
+  </main>
+
+  <footer class="footer">
+    <label class="speed">
+      Voice speed
+      <select id="speed-select">
+        <option value="0.65">Slow</option>
+        <option value="1" selected>Normal</option>
+      </select>
+    </label>
+    <span id="voice-status" class="voice-status"></span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
